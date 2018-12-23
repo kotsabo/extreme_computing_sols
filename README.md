@@ -51,7 +51,7 @@ PostTypeId is 2 the post refers to an answer.
 
 An example of a question post is:
 
-<row Id="2155" PostTypeId="1" AcceptedAnswerId="2928" CreationDate="2008-08-05T12:13:40.640" Score="25" ViewCount="17551" Body="The question content" OwnerUserId="371" LastEditorUserId="2134" LastEditorDisplayName="stackoverflowGuy" LastEditDate="2008-08-23T18:09:09.777" LastActivityDate="2013-09-19T15:39:43.160" Title="How do I?" Tags="&lt;asp.net&gt;" AnswerCount="6" CommentCount="0" FavoriteCount="12" />
+<row Id="2155", PostTypeId="1" AcceptedAnswerId="2928" CreationDate="2008-08-05T12:13:40.640" Score="25" ViewCount="17551" Body="The question content" OwnerUserId="371" LastEditorUserId="2134" LastEditorDisplayName="stackoverflowGuy" LastEditDate="2008-08-23T18:09:09.777" LastActivityDate="2013-09-19T15:39:43.160" Title="How do I?" Tags="&lt;asp.net&gt;" AnswerCount="6" CommentCount="0" FavoriteCount="12" />
 
 We need to parse the record into a structure that will allow access to the value of each attribute
 by name. In this example, Id="2155" represents the unique identifier given to the post; PostTypeId="1"
@@ -60,7 +60,7 @@ user for this query is the answer with Id="2928"; and so on.
 
 An example of a post that corresponds to an answer is:
 
-<row Id="659891" PostTypeId="2" ParentId="659089" CreationDate="2009-03-18T20:07:44.843" Score="1" Body="Description of the problem" OwnerUserId="45756" OwnerDisplayName="terminator" LastActivityDate="2009-03-18T20:07:44.843" CommentCount="0" />
+<row Id="659891", PostTypeId="2" ParentId="659089" CreationDate="2009-03-18T20:07:44.843" Score="1" Body="Description of the problem" OwnerUserId="45756" OwnerDisplayName="terminator" LastActivityDate="2009-03-18T20:07:44.843" CommentCount="0" />
 
 The attribute-value pair Id="659891" represents the unique identifier given to this post. The value
 for ParentId represents the identifier of the question this answer applies to, and the value for OwnerUserId
@@ -70,16 +70,11 @@ represents the user who wrote the answer for this question.
 Which are the 10 most popular questions according to their view counts (attribute ViewCount in a question
 post)? 
 
-Output Format: 
-
-Count Id
-
-17551 659891
-
-2131 659892
-
-1782 314159
-
+Output Format: <br />
+Count Id <br />
+17551 659891 <br />
+2131 659892 <br />
+1782 314159 <br />
 . . .
 
 The columns are count and question id. Ties may be broken arbitrarily. Sort in decreasing order of
@@ -89,10 +84,8 @@ count. Use a single space between count and id.
 Who was the user that answered the most questions and what were the Ids of these questions? A user
 has answered a question only if their answer was selected as the accepted answer. 
 
-Output Format:
-
-OwnerUserId -> PostId, PostId, PostId, . . .
-
+Output Format: <br />
+OwnerUserId -> PostId, PostId, PostId, . . . <br />
 1342 -> 23, 26, 531
 
 Use a single space in your actual output: “1342 -> 23, 26, 531”.
