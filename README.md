@@ -51,7 +51,7 @@ PostTypeId is 2 the post refers to an answer.
 
 An example of a question post is:
 
-<row Id="2155", PostTypeId="1", AcceptedAnswerId="2928", CreationDate="2008-08-05T12:13:40.640" Score="25" ViewCount="17551" Body="The question content" OwnerUserId="371" LastEditorUserId="2134" LastEditorDisplayName="stackoverflowGuy" LastEditDate="2008-08-23T18:09:09.777" LastActivityDate="2013-09-19T15:39:43.160" Title="How do I?" Tags="&lt;asp.net&gt;" AnswerCount="6" CommentCount="0" FavoriteCount="12" />
+<row Id="2155" PostTypeId="1" AcceptedAnswerId="2928" CreationDate="2008-08-05T12:13:40.640" Score="25" ViewCount="17551" Body="The question content" OwnerUserId="371" LastEditorUserId="2134" LastEditorDisplayName="stackoverflowGuy" LastEditDate="2008-08-23T18:09:09.777" LastActivityDate="2013-09-19T15:39:43.160" Title="How do I?" Tags="&lt;asp.net&gt;" AnswerCount="6" CommentCount="0" FavoriteCount="12" />
 
 We need to parse the record into a structure that will allow access to the value of each attribute
 by name. In this example, Id="2155" represents the unique identifier given to the post; PostTypeId="1"
