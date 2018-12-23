@@ -7,16 +7,16 @@
 ### Task 1
 Use lare files as input and produce an inverted index using MapReduce. For instance, given the following documents:
 
-d1.txt: cat dog cat fox
-d2.txt: cat bear cat cat fox
+d1.txt: cat dog cat fox <br />
+d2.txt: cat bear cat cat fox <br />
 d3.txt: fox wolf dog
 
 we build the following full inverted index.
 
-bear : 1 : {(d2.txt,1)}
-cat : 2 : {(d1.txt, 2), (d2.txt, 3)}
-dog : 2 : {(d1.txt, 1), (d3.txt, 1)}
-fox : 3 : {(d1.txt, 1), (d2.txt, 1), (d3.txt, 1)}
+bear : 1 : {(d2.txt,1)} <br />
+cat : 2 : {(d1.txt, 2), (d2.txt, 3)} <br />
+dog : 2 : {(d1.txt, 1), (d3.txt, 1)} <br />
+fox : 3 : {(d1.txt, 1), (d2.txt, 1), (d3.txt, 1)} <br />
 wolf : 1 : {(d3.txt,1)}
 
 For each term (anything separated by spaces), there is a single record consisting of a number and
