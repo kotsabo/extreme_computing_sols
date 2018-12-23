@@ -1,0 +1,1 @@
+pv /afs/inf.ed.ac.uk/group/teaching/exc/ex2/part3/webLarge.txt | parallel --pipe ./mapper07.py  |./reducer07.py  > output.txt
