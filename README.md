@@ -8,21 +8,15 @@
 Use lare files as input and produce an inverted index using MapReduce. For instance, given the following documents:
 
 d1.txt: cat dog cat fox
-
 d2.txt: cat bear cat cat fox
-
 d3.txt: fox wolf dog
 
 we build the following full inverted index.
 
 bear : 1 : {(d2.txt,1)}
-
 cat : 2 : {(d1.txt, 2), (d2.txt, 3)}
-
 dog : 2 : {(d1.txt, 1), (d3.txt, 1)}
-
 fox : 3 : {(d1.txt, 1), (d2.txt, 1), (d3.txt, 1)}
-
 wolf : 1 : {(d3.txt,1)}
 
 For each term (anything separated by spaces), there is a single record consisting of a number and
@@ -57,7 +51,7 @@ PostTypeId is 2 the post refers to an answer.
 
 An example of a question post is:
 
-<row Id="2155" PostTypeId="1" AcceptedAnswerId="2928" CreationDate="2008-08-05T12:13:40.640" Score="25" ViewCount="17551" Body="The question content" OwnerUserId="371" LastEditorUserId="2134" LastEditorDisplayName="stackoverflowGuy" LastEditDate="2008-08-23T18:09:09.777" LastActivityDate="2013-09-19T15:39:43.160" Title="How do I?" Tags="&lt;asp.net&gt;" AnswerCount="6" CommentCount="0" FavoriteCount="12" />
+<row Id="2155", PostTypeId="1", AcceptedAnswerId="2928", CreationDate="2008-08-05T12:13:40.640" Score="25" ViewCount="17551" Body="The question content" OwnerUserId="371" LastEditorUserId="2134" LastEditorDisplayName="stackoverflowGuy" LastEditDate="2008-08-23T18:09:09.777" LastActivityDate="2013-09-19T15:39:43.160" Title="How do I?" Tags="&lt;asp.net&gt;" AnswerCount="6" CommentCount="0" FavoriteCount="12" />
 
 We need to parse the record into a structure that will allow access to the value of each attribute
 by name. In this example, Id="2155" represents the unique identifier given to the post; PostTypeId="1"
